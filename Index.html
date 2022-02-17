@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RuneVillage</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+
+      html, body {
+        height: 100%;
+		width: 100%;
+		margin: 0px;
+		padding: 0px;
+		overflow-x: hidden;
+      }
+
+      body {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+      }
+	  
+      #wrapper {
+        background-image: url('stonebackground.png');
+        width: 100%;
+        min-height: 100%;
+      }
+      .table-surface {
+        width: 90%;
+		max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+		padding-top: 1px;
+		padding-bottom: 1px;
+        border-right: 1px solid black;
+		border-left: 1px solid black;
+		border-bottom: 1px solid black;
+        min-height: 100%;
+        background-image: url('woodbackground.png');
+      }
+
+      .scroll-container-red-border {
+        border: 1px solid #5B0B0B;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+
+      .scroll-container-black-border {
+        border: 1px solid black;
+        height: 100%;
+        position: relative;
+      }
+
+      .scroll-ornate-border {
+        height: 35px;
+        background-image: url('blackheader.png');
+        width: 100%;
+        position: relative;
+      }
+
+      .scroll-ornate-border-bottom-strip {
+        background-image: url('greenborder.png');
+        position: absolute;
+        bottom: 0;
+        height: 10px;
+        width: 100%;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+
+      .logo-container {
+        background-image: url('rvbannerlogo.png');
+        background-repeat: no-repeat;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        height: 157px;
+
+      }
+
+      .scroll-content-left {
+        background-image: url('parchmentmedium.png');
+        width: 66.6%;
+		max-width: 640px;
+        height: 100%;
+        border-right: 1px solid black;
+        padding-top: 30px;
+        position: relative;
+      }
+
+      .scroll-content-right {
+        background-image: url('parchmentdark.png');
+        position: absolute;
+        width: 33.3%;
+		max-width: 320px;
+		border-left: 1px solid black;
+        right: 0px;
+        top: 35px;
+        bottom: 0;
+      }
+
+      .scroll-content-wrapper-middle {
+        margin-left: 40px;
+        margin-right: 40px;
+        position: relative;
+        height: 100%;
+        padding-bottom: 40px;
+      }
+
+      .news-logo {
+        background-image: url('recentnews.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100px;
+      }
+
+      .news-container {
+        background-image: url('parchmentlight.png');
+        width: 100%;
+        height: 100%;
+        border: 1px solid #85621E;
+        bottom: 0;
+        top: 132px;
+        margin-top: 30px;
+      }
+
+      .news-text {
+        padding: 25px;
+        font-family: Georgia;
+        font-size: 16px;
+      }
+
+      p {
+        padding-top: 0;
+        padding-bottom: 20px;
+        line-height: 17px;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .button-wrapper {
+        width: 100%;
+        border-bottom: 2px solid black;
+		border-right: 1px solid black;
+        height: 80px;
+        background-image: url('parchmentblack.png');
+        position: relative;
+        display: block;
+      }
+
+      .icon-wrapper {
+        background-image: url('iconbackground.png');
+        background-repeat: no-repeat;
+        height: 80px;
+        width: 80px;
+        border-right: 1px solid black;
+        position: relative;
+      }
+
+      .icon-slot {
+        background-repeat: no-repeat;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+	  
+	  @font-face {
+		font-family: Folkard;
+		src: url(folkard_.ttf);
+      }
+	  
+      .label-wrapper {
+		display: flex;
+		width: 75%;
+        max-width: 240px;
+        height: 80px;
+        position: absolute;
+        top: 0;
+        background-repeat: no-repeat;
+        left: 25%;
+		max-left: 80px;
+		font-family: Folkard;
+		font-size: 42px;
+		color: #FFD74B;
+		-webkit-text-stroke: 0.75px #6E5818;
+		padding-top: 14px;
+		align-items: center;
+		justify-content: center;
+		
+      }
+
+	  
+	  .label-subtext {
+		width: 240px;
+        height: 80px;
+        position: absolute;
+        top: 0;
+        background-repeat: no-repeat;
+        left: 0px;
+		font-family: Georgia;
+		font-size: 12px;
+		color: #CCCCCC;
+		padding-top: 55px;
+		padding-left: 0px;
+		
+		}
+
+      .center-positioner {
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="center-positioner">
+        <div class="table-surface">
+          <div class="logo-container"></div>
+          <div class="scroll-container-red-border">
+            <div class="scroll-container-black-border">
+              <div class="scroll-ornate-border">
+                <div class="scroll-ornate-border-bottom-strip"></div>
+              </div>
+              <div class="scroll-content-left">
+                <div class="scroll-content-wrapper-middle">
+                  <div class="news-logo"></div>
+                  <div class="news-container">
+                    <div class="news-text">
+                      <p>Lorem ipsum dolor sit amet!</p>
+                      <p>
+                        Consectetur adipiscing elit. Quisque semper, elit at scelerisque faucibus, justo mi consequat ligula, sit amet lobortis justo risus eget sapien. Proin maximus, lorem varius ultrices ultrices, libero lorem fringilla turpis, ac feugiat elit mi ut ligula. Aenean ac enim tortor. Pellentesque nec faucibus est. Cras pellentesque molestie tristique. Integer nec erat semper, fermentum massa viverra, auctor lorem. Vivamus sed aliquam massa, et sodales sem. Pellentesque et mollis risus. Mauris dapibus eros eu lectus malesuada, ut aliquam tellus ultrices. Integer pulvinar maximus mi, ut pretium ex porta tristique. Duis ut pulvinar sapien.
+                      </p>
+                      <p>
+                        Integer ut tellus a arcu ornare luctus. Maecenas eget metus nec quam viverra volutpat ac ut elit. Aenean placerat, urna in tempus consequat, magna lorem condimentum libero, a porta justo metus non leo. Vivamus facilisis semper ante in accumsan. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vulputate, orci a bibendum sagittis, urna diam varius urna, eu sodales turpis odio ut est. Pellentesque id ipsum nec turpis varius pulvinar quis sed risus. Sed tincidunt tempus vulputate. Mauris lacinia tellus eget nisl varius, in suscipit tellus gravida. Curabitur vel velit quis turpis pellentesque pharetra. Pellentesque convallis ornare leo, a venenatis ante commodo quis. Morbi ac felis dictum, bibendum lectus sed, aliquam augue. Curabitur nec porttitor metus. Donec non pulvinar tortor. Pellentesque laoreet libero a dui vehicula, in semper justo sodales. Suspendisse molestie nibh non nisi aliquam rutrum.
+                      </p>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="scroll-content-right">
+
+                <a href="https://www.example.com" class="button-wrapper">
+                  <div class="icon-wrapper">
+                    <div class="icon-slot" style="background-image: url('iconforums.png')"></div>
+                  </div>
+                  <div class="label-wrapper" <p>Forums</p></div>
+				  <div class="label-subtext" <p></p></div>
+                </a>
+
+                <a href="https://www.example.com" class="button-wrapper">
+                  <div class="icon-wrapper">
+                    <div class="icon-slot" style="background-image: url('iconlibrary.png')"></div>
+                  </div>
+                  <div class="label-wrapper" <p>Library</p></div>
+				  <div class="label-subtext" <p></p></div>
+                </a>
+
+                <a href="https://www.example.com" class="button-wrapper">
+                  <div class="icon-wrapper">
+                    <div class="icon-slot" style="background-image: url('iconvillager.png')"></div>
+                  </div>
+                  <div class="label-wrapper" <p>Villager</p></div>
+				  <div class="label-subtext" <p></p></div>
+                </a>
+
+                <a href="https://www.example.com" class="button-wrapper">
+                  <div class="icon-wrapper">
+                    <div class="icon-slot" style="background-image: url('iconarchive.png')"></div>
+                  </div>
+                  <div class="label-wrapper" <p>Archive</p></div>
+				  <div class="label-subtext" <p></p></div>
+                </a>
+
+                <a href="https://www.example.com" target="_blank" class="button-wrapper">
+                  <div class="icon-wrapper">
+                    <div class="icon-slot" style="background-image: url('icondiscord.png')"></div>
+                  </div>
+                  <div class="label-wrapper" <p>Discord</p></div>
+				  <div class="label-subtext" <p></p></div>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
